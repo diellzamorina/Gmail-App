@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#17540E" >
+
+            <ImageView
+                android:layout_height="70dp"
+                android:layout_width="75dp"
+                android:src="@drawable/dexaaa"
+                android:layout_gravity="end"
+
+                />
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="horizontal" >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNewest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Newest"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textAllCaps="false"
+                android:textColor="#CAF2C4"
+                android:background="@drawable/outline_rounded"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOldest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:text="Oldest"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textColor="#CAF2C4"
+                android:background="@drawable/outline_rounded"
+                />
+
+            <ImageButton
+                android:id="@+id/btngoBack"
+                android:layout_width="40dp"
+                android:layout_height="70dp"
+                android:src="@drawable/goback"
+                android:background="@color/white"
+                android:layout_weight="0.2"
+
+              />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"
+        tools:listitem="@layout/list_item"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
